@@ -17,6 +17,7 @@ def search_routes(query: str) -> str:
                 text = f.read()
             if q in text.lower():
                 found.append(text.split("\n")[0])
+                
     if not found:
         return f"За запитом '{query}' нічого не знайдено."
     return " | ".join(found)
